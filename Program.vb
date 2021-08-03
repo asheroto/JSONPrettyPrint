@@ -2,7 +2,6 @@ Imports System.Runtime.InteropServices
 Imports Newtonsoft.Json
 
 Module Program
-
     Sub Main(args As String())
         Dim data As String = Nothing
 
