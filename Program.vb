@@ -4,6 +4,13 @@ Imports Newtonsoft.Json
 Module Program
     Sub Main(args As String())
         Dim data As String = Nothing
+        Dim fileName As String = Nothing
+
+        If args.Count = 2 Then
+            If LCase(args(0)) = "-o" Or LCase(args(0)) = "--output" Then
+                fileName = args(1)
+            End If
+        End If
 
         Dim consoleData As String = Nothing
         Dim isKeyAvailable As Boolean
@@ -31,9 +38,19 @@ Module Program
             End
         End Try
 
-        'Write output
         result = result.Trim
-        Console.Write(result)
+        If fileName IsNot Nothing Then
+            'Write output to file
+            Try
+                IO.File.WriteAllText(fileName, result)
+                Console.WriteLine("Contents saved to: " & fileName)
+            Catch ex As Exception
+                Console.WriteLine("Error: " & ex.Message)
+            End Try
+        Else
+            'Write output to screen
+            Console.Write(result)
+        End If
     End Sub
 
     Function format_json(ByVal json As String) As String
@@ -58,6 +75,10 @@ Module Program
     Sub WriteHelp()
         Console.WriteLine()
         Console.WriteLine("Pipe JSON data to JSONPrettyPrint and it will become pretty!")
+        Console.WriteLine()
+        Console.WriteLine("Optionally output to file:")
+        Console.WriteLine("     -o <file>")
+        Console.WriteLine("     --output <file>")
         Console.WriteLine()
         Console.WriteLine("Example:")
         If GetOS() = "Windows" Then

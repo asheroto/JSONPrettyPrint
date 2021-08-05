@@ -5,6 +5,9 @@ Pipe JSON data to make it pretty!
 Works on Windows, Linux, Mac.
 
 # Example Usage
+
+To output to file, specify `-o <file>` or `--output <file>`.
+
 ## Windows
 
 `$(Invoke-WebRequest https://am.i.mullvad.net/json).Content | .\JSONPrettyPrint.exe`
