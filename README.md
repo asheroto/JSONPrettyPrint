@@ -10,14 +10,14 @@ To output to file, specify `-o <file>` or `--output <file>`.
 
 ## Windows
 
-`$(Invoke-WebRequest https://am.i.mullvad.net/json).Content | .\JSONPrettyPrint.exe`
+`$(Invoke-WebRequest https://am.i.mullvad.net/json).Content | JSONPrettyPrint`
 
 or if `curl.exe` is installed...
 
-`curl -s https://am.i.mullvad.net/json | .\JSONPrettyPrint`
+`curl -s https://am.i.mullvad.net/json | JSONPrettyPrint`
 
 ## Linux/Mac
-`curl -s https://am.i.mullvad.net/json | ./JSONPrettyPrint`
+`curl -s https://am.i.mullvad.net/json | JSONPrettyPrint`
 
 # Download & Run
 

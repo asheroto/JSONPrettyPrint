@@ -10,8 +10,9 @@
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/asheroto/JSONPrettyPrint</RepositoryUrl>
     <PackageTags>json, pretty, beautify, pipe, windows, linux, mac, cross-platform</PackageTags>
-    <Version>1.0.1.0</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.0.2.0</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
