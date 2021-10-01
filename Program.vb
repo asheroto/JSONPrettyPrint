@@ -82,13 +82,13 @@ Module Program
         Console.WriteLine()
         Console.WriteLine("Example:")
         If GetOS() = "Windows" Then
-            Console.WriteLine("     $(Invoke-WebRequest https://am.i.mullvad.net/json).Content | .\JSONPrettyPrint.exe")
+            Console.WriteLine("     $(Invoke-WebRequest https://am.i.mullvad.net/json).Content | JSONPrettyPrint")
             Console.WriteLine()
             Console.WriteLine("         or if curl.exe is installed...")
             Console.WriteLine()
-            Console.WriteLine("     curl.exe -s https://am.i.mullvad.net/json | .\JSONPrettyPrint.exe")
+            Console.WriteLine("     curl.exe -s https://am.i.mullvad.net/json | JSONPrettyPrint")
         Else
-            Console.WriteLine("     curl -s https://am.i.mullvad.net/json | ./JSONPrettyPrint")
+            Console.WriteLine("     curl -s https://am.i.mullvad.net/json | JSONPrettyPrint")
         End If
         Console.WriteLine()
         End
